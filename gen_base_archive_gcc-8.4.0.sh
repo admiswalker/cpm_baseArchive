@@ -5,11 +5,11 @@ mkdir -p ./base_archive
 CALL_DIR=`pwd -P`
 
 cd $CALL_DIR/env_cpm/local/
-tar -Jcf $CALL_DIR/base_archive/local_gcc-8.4.0.tar.xz *  # tar.xz
+tar -Jcf $CALL_DIR/base_archive/local_amd64_gcc-8.4.0.tar.xz *  # tar.xz
 
 cd $CALL_DIR/base_archive/
-split -d -b 100m local_gcc-8.4.0.tar.xz local_gcc-8.4.0.tar.xz-
-rm local_gcc-8.4.0.tar.xz
+split -d -b 100m local_gcc-8.4.0.tar.xz local_amd64_gcc-8.4.0.tar.xz-
+rm local_amd64_gcc-8.4.0.tar.xz
 
 # Comparison results
 #  of compression local gcc-8.4.0 head and binaries.
