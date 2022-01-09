@@ -39,7 +39,6 @@ if [ ! -e $INST_PATH/lib/lib$libName.a ]; then
 	#CFLAGS=-I$INST_PATH/include
 	#LDFLAGS=-L$INST_PATH/lib
 
-	#./configure --prefix=$INST_PATH --enable-cxx
 	./configure --prefix=$INST_PATH --with-gmp-prefix=$INST_PATH
 	make -j
 	make check

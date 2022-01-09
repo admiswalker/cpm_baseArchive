@@ -33,11 +33,12 @@ if [ ! -e $INST_PATH/bin/$binName ]; then
 	cd $BUILD_DIR/$fName_base/
 	
 	# fix installation error
+	# - ref: http://programcode.blog.fc2.com/blog-entry-16.html
 	cd lib
 	sed -i -e '/gets is a security/d' ./stdio.in.h
 	cd ..
-	
-	# ref: http://programcode.blog.fc2.com/blog-entry-16.html	#export PATH
+
+	#export PATH
 	#export CFLAGS
 	#export LDFLAGS
 	#PATH=$PATH:$INST_PATH/bin
