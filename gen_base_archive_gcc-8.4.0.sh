@@ -5,11 +5,11 @@ mkdir -p ./base_archive
 CALL_DIR=`pwd -P`
 
 cd $CALL_DIR/env_cpm/local/
-tar -Jcf $CALL_DIR/base_archive/local_amd64_gcc-8.4.0.tar.xz *  # tar.xz
+tar -Jcf $CALL_DIR/base_archive/amd64_gcc-8.4.0.tar.xz *  # tar.xz
 
 cd $CALL_DIR/base_archive/
-split -d -b 100m local_gcc-8.4.0.tar.xz local_amd64_gcc-8.4.0.tar.xz-
-rm local_amd64_gcc-8.4.0.tar.xz
+split -d -b 100m local_gcc-8.4.0.tar.xz amd64_gcc-8.4.0.tar.xz-
+rm amd64_gcc-8.4.0.tar.xz
 
 # Comparison results
 #  of compression local gcc-8.4.0 head and binaries.
@@ -27,23 +27,23 @@ rm local_amd64_gcc-8.4.0.tar.xz
 # --- compress ------------------------------------------------
 #cd $CALL_DIR/env_cpm/local/
 #echo 'tar'
-#time tar -zcf $CALL_DIR/base_archive/local_gcc-8.4.0.tar *  # tar
+#time tar -zcf $CALL_DIR/base_archive/amd64_gcc-8.4.0.tar *  # tar
 #echo ''
 #
 #echo 'tar.bz2'
-#time tar -jcf $CALL_DIR/base_archive/local_gcc-8.4.0.tar.bz2 * # tar.bz2
+#time tar -jcf $CALL_DIR/base_archive/amd64_gcc-8.4.0.tar.bz2 * # tar.bz2
 #echo ''
 #
 #echo 'tar.gz'
-#time tar -zcf $CALL_DIR/base_archive/local_gcc-8.4.0.tar.gz *  # tar.gz
+#time tar -zcf $CALL_DIR/base_archive/amd64_gcc-8.4.0.tar.gz *  # tar.gz
 #echo ''
 #
 #echo 'tar.xz'
-#time tar -Jcf $CALL_DIR/base_archive/local_gcc-8.4.0.tar.xz *  # tar.xz
+#time tar -Jcf $CALL_DIR/base_archive/amd64_gcc-8.4.0.tar.xz *  # tar.xz
 #echo ''
 #
 #echo 'zip'
-#time zip -r $CALL_DIR/base_archive/local_gcc-8.4.0.zip ./       # zip
+#time zip -r $CALL_DIR/base_archive/amd64_gcc-8.4.0.zip ./       # zip
 # -------------------------------------------------------------
 
 
@@ -51,25 +51,25 @@ rm local_amd64_gcc-8.4.0.tar.xz
 #cd $CALL_DIR/base_archive
 #mkdir tar
 #echo 'tar'
-#time tar -zxf local_gcc-8.4.0.tar -C ./tar # tar
+#time tar -zxf amd64_gcc-8.4.0.tar -C ./tar # tar
 #echo ''
 #
 #mkdir bz2
 #echo 'tar.bz2'
-#time tar -jxf local_gcc-8.4.0.tar.bz2 -C ./bz2 # tar.bz2
+#time tar -jxf amd64_gcc-8.4.0.tar.bz2 -C ./bz2 # tar.bz2
 #echo ''
 #
 #mkdir gz
 #echo 'tar.gz'
-#time tar -zxf local_gcc-8.4.0.tar.gz -C ./gz # tar.gz
+#time tar -zxf amd64_gcc-8.4.0.tar.gz -C ./gz # tar.gz
 #echo ''
 #
 #mkdir xz
 #echo 'tar.xz'
-#time tar -Jxf local_gcc-8.4.0.tar.xz -C ./xz  # tar.xz
+#time tar -Jxf amd64_gcc-8.4.0.tar.xz -C ./xz  # tar.xz
 #echo ''
 #
 #echo 'zip'
-#time unzip local_gcc-8.4.0.zip       # zip
+#time unzip amd64_gcc-8.4.0.zip       # zip
 # -------------------------------------------------------------
 
