@@ -9,6 +9,13 @@ cpm base archives and its generator
 
 Note. Building gcc may require a lot of memory. Using 32 or 64 GB RAM machine and adding a swap memory as insurance.
 
+# Build and generate a local gcc archive
+Execute below commands
+```
+./build_gcc-8.4.0.sh
+./gen_base_archive_gcc-8.4.0.sh
+```
+
 # File and Directory descriptions
 
 | File or directory name        | Description Origin |
